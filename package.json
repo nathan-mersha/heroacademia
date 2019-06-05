@@ -6,7 +6,7 @@
   "scripts": {
     "run": "node app",
     "test": "istanbul cover _mocha -- --reporter mochawesome --reporter-options reportDir=report,reportFilename=index --exit || istanbul cover _mocha -- --reporter mochawesome --reporter-options reportDir=report,reportFilename=index",
-    "start": "pm2-docker app.js --name hero_academia -i 1 || pm2 restart hero_academia ",
+    "start": "pm2 start app.js --name hero_academia -i 1 || pm2 restart hero_academia ",
     "apidoc": "apidoc -i ./routes -o ./apidocs"
   },
   "dependencies": {
