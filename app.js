@@ -111,7 +111,7 @@ route(app);
  */
 app.use(function (req, res, next) {
     if(req.url === "/") {
-        res.redirect('http://localhost:3300/heroAcademia/apidoc');
+        res.redirect(`${config.REVERSE_PROXY}${config.HTTP_PORT}/heroAcademia/apidoc`);
         res.status(200);
     }else{
         debug("Un-matched endpoint");
