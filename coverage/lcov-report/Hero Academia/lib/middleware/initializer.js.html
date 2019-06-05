@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for Hero Academia/lib/middleware/initializer.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">Hero Academia/lib/middleware/</a> initializer.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">65% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>26/40</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">10% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>1/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">65% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>26/40</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author             Young Midoria
+ * @name               heroAcademia
+ * @description        Initializer module
+ * @kind               Library
+ * @module             Pings dependent services
+ * @copyright          Copyright : 2018
+ */
+&nbsp;
+let
+    debug   = require('debug')('initializer'),
+    xtend   = require('xtend'),
+    request = require('request'),
+    async   = require('async');
+&nbsp;
+&nbsp;
+/**
+ * @name                        - Pinger
+ * @description                 - Pings dependent services that this service depends on
+ * @param servicesAddresses     - Dependent services.
+ * @param providedOption        - Defines abort if fail option (true by default)
+ * @param cb                    - Callback function (error,proceed)
+ */
+exports.pinger              = function pinger               (servicesAddresses,providedOption,cb)   {
+    debug("Pinger init...");
+&nbsp;
+    let defaultOption = {abortIfFail: true}; // Defines default option
+&nbsp;
+    function checker(cb2) {
+        debug("Checker init...");
+&nbsp;
+        let option = xtend(defaultOption, providedOption); // Merge options with the provided one.
+&nbsp;
+        /*
+         Begin execution
+         */
+        async.waterfall([
+            serviceChecker, // Checks for dependent services.
+            infoLogger      // Logs information.
+        ],function (err,proceed) {
+            cb2(null,proceed);
+        });
+&nbsp;
+        /**
+         * @name            - Service Checker
+         * @description     - Check if services are up &amp; respond with down services
+         * @param callback  - Callback function (error,allServiceUp,downServices)
+         */
+        function serviceChecker (callback)                              {
+            debug("Service checker init...");
+&nbsp;
+            let allServicesUp = true;
+&nbsp;
+            /**
+             * @description     - Defines an array of down services
+             * @type {Array}
+             */
+            let downServices  = [];
+&nbsp;
+            servicesAddresses.forEach(function (serviceAddress) {
+                request.get(serviceAddress,<span class="fstat-no" title="function not covered" >function (err,res,body) {</span>
+<span class="cstat-no" title="statement not covered" >                    if (!res) {</span>
+<span class="cstat-no" title="statement not covered" >                        allServicesUp = false;</span>
+<span class="cstat-no" title="statement not covered" >                        downServices.push(serviceAddress);</span>
+                    }
+                });
+            });
+&nbsp;
+            debug("Service Checker completed");
+            callback(null,allServicesUp, downServices);
+        }
+&nbsp;
+        /**
+         * @name                    - Info logger
+         * @description             - Logs information about the condition of the services.
+         * @param allServicesUp     - All services that are up and running
+         * @param downServices      - All services that are down
+         * @param callback          - Callback function (error,proceed)
+         */
+        function infoLogger     (allServicesUp,downServices,callback)   {
+            debug("Info Logger init...");
+            <span class="missing-if-branch" title="else path not taken" >E</span>if(allServicesUp){ // all dependent services are up
+                debug("All dependent services are up");
+                servicesAddresses.forEach(function (serviceAddress) {
+                    debug(`${serviceAddress} : is up`);
+                });
+                callback(null, true);
+&nbsp;
+            }else <span class="cstat-no" title="statement not covered" >if(!allServicesUp){ // all services are not up</span>
+<span class="cstat-no" title="statement not covered" >                debug("Some or all dependent services are down");</span>
+<span class="cstat-no" title="statement not covered" >                downServices.forEach(<span class="fstat-no" title="function not covered" >function (downService) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    debug(`${downService} : is down`);</span>
+                });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if(option.abortIfFail){ // not initiating this service</span>
+<span class="cstat-no" title="statement not covered" >                    debug("Quiting services");</span>
+<span class="cstat-no" title="statement not covered" >                    debug("Some dependent services may be down");</span>
+<span class="cstat-no" title="statement not covered" >                    callback(null, false);</span>
+                }else <span class="cstat-no" title="statement not covered" >if(!(option.abortIfFail)) { // initiate services anyway</span>
+<span class="cstat-no" title="statement not covered" >                    debug("Some dependent services are down, proceeding anyway");</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    callback(null, true);</span>
+                }
+            }
+        }
+    }
+    checker(function (err,proceed) {
+        cb(err, proceed);
+    });
+&nbsp;
+};
+&nbsp;
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jun 05 2019 17:42:57 GMT+0300 (EAT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

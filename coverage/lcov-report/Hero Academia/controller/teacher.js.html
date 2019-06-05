@@ -1,0 +1,893 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for Hero Academia/controller/teacher.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">Hero Academia/controller/</a> teacher.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">77.45% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>79/102</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">52.94% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>18/34</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>22/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">77.23% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>78/101</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author              Young Midoria
+ * @name                heroAcademia
+ * @module              teacher.js
+ * @description         Controller for teacher
+ * @kind                Controller
+ * @copyright           Copyright : 2018
+ */
+&nbsp;
+let
+    teacherDAL        = require('../dal/teacher'),
+    constants               = require('../lib/constant'),
+    errorCodes              = constants.errorCodes,
+    config                  = require('../config'),
+    helper                  = require('../lib/helper/'),
+    controllerHelper        = helper.controllerHelper,
+    queryResponseHandler    = controllerHelper.queryResponseHandler,
+&nbsp;
+    debug                   = require('debug')('heroAcademia/controller/teacher'),
+    util                    = require('util'),
+&nbsp;
+    log                     = require('../lib/helper/others/logger'),
+                        
+    async                   = require('async');
+&nbsp;
+&nbsp;
+/**
+ * @name                - Create
+ * @description         - Creates teacher data
+ * @param req           - Request object
+ * @param res           - Response object
+ * @param next          - Next
+ */
+exports.create          = function (req, res, next) {
+    debug('Create init...');
+&nbsp;
+    let body = req.body;
+    async.waterfall([
+        validateData,
+        createData
+    ],function () {
+        debug('Create completed.');
+    });
+&nbsp;
+    /**
+     * @name                - Validate data
+     * @description         - Validates if the body contains the require field.
+     * @param callback      - Callback function (error)
+     */
+    function validateData (callback) {
+        debug('Validate data init...');
+&nbsp;
+        controllerHelper.dataValidator([],req,res,callback);
+    }
+    
+    /**
+     * @name                - Create data
+     * @description         - Creates teacher data
+     * @param callback      - Callback function (error)
+     */
+    function createData (callback) {
+        debug('Create data init...');
+        
+        teacherDAL.create(body,function (err, data) { // Creating teacher data
+            queryResponseHandler(err,data,res,function (err, data) {
+                <span class="missing-if-branch" title="else path not taken" >E</span>if(data){ // teacher data successfully created
+                    res.status(201);
+                    res.json(data);
+                    callback(null);
+                }else {
+<span class="cstat-no" title="statement not covered" >                    let errMsg = errorCodes.SEC.NO_DATA_FOUND;</span>
+<span class="cstat-no" title="statement not covered" >                    errMsg.detail = 'teacher data could not be found (Failed to create teacher data)';</span>
+<span class="cstat-no" title="statement not covered" >                    res.status(500);</span>
+<span class="cstat-no" title="statement not covered" >                    res.json(errMsg);</span>
+                }
+            });
+        });
+    }
+};
+&nbsp;
+/**
+ * @name                - Find
+ * @description         - Retrieves private, public and paginated data based on query construct
+ * @param req           - Request object
+ * @param res           - Response object
+ * @param next          - Next
+ */
+exports.find            = function (req, res, next) {
+    debug('Find init.');
+&nbsp;
+    if(! util.isNullOrUndefined(req.query._id)) {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if(util.isNullOrUndefined(req.query.private) === "true") {
+            // todo insert authentication middle ware here
+<span class="cstat-no" title="statement not covered" >            getPrivate(req, res, next);</span>
+        }else{
+            getPublic(req, res, next);
+        }
+    }else{
+        let option = {
+            page     : util.isNullOrUndefined(req.query.page)   ? 1                             : <span class="branch-1 cbranch-no" title="branch not covered" >Number(req.query.page),</span>   // assigns default page value, if not specified.
+            sort     : util.isNullOrUndefined(req.query.sort)   ? {_id : -1}                    : <span class="branch-1 cbranch-no" title="branch not covered" >req.query.sort,</span>           // assigns default sort param value, if not specified.
+            lean     : util.isNullOrUndefined(req.query.lean)   ? false                         : <span class="branch-1 cbranch-no" title="branch not covered" >req.query.lean,</span>           // assigns default lean value, if not specified.
+            limit    : util.isNullOrUndefined(req.query.limit)  ? config.COLLECTION_RETURN_SIZE : <span class="branch-1 cbranch-no" title="branch not covered" >Number(req.query.limit),</span>   // assigns default limit value (passed to the config), if not specified.
+            select   : "name age gender followers superPower costume powerGrade tournament history angerLevel optimismLevel firstModified lastModified"
+        };
+&nbsp;
+        let query = controllerHelper.queryFilter(req,["name","age","gender","followers","superPower","costume","powerGrade","tournament","history","angerLevel","optimismLevel" , "_id", "__v"]);
+        // get collection paginated invoked
+        teacherDAL.getCollectionsPaginated(query,option,function (err,data) {
+            queryResponseHandler(err,data,res,function (err, data) { // Possible errors are handled.
+                <span class="missing-if-branch" title="else path not taken" >E</span>if(data){ // Data found.
+                    debug("Found data");
+&nbsp;
+                    res.status(200);
+                    res.json(data);
+                }else <span class="cstat-no" title="statement not covered" >if(!data){ // No data found.</span>
+<span class="cstat-no" title="statement not covered" >                    debug(`Found no data`);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    let errMsg = errorCodes.SEC.NO_DATA_FOUND;</span>
+<span class="cstat-no" title="statement not covered" >                    errMsg.detail = "No teacher data found."; </span>// Adding detailed data.
+<span class="cstat-no" title="statement not covered" >                    res.status(404);</span>
+<span class="cstat-no" title="statement not covered" >                    res.json(errMsg);</span>
+                }
+            });
+        });
+    }
+&nbsp;
+&nbsp;
+    
+};
+&nbsp;
+/**
+ * @name                - Update Many
+ * @description         - Updates all teacher data that matches query
+ * @param req           - Request object
+ * @param res           - Response object
+ * @param next          - Next
+ */
+exports.update          = function (req, res, next) {
+    debug(`Update many init.`);
+&nbsp;
+    let query = controllerHelper.queryFilter(req,["name","age","gender","followers","superPower","costume","powerGrade","tournament","history","angerLevel","optimismLevel", "_id", "__v"]);
+&nbsp;
+    async.waterfall([
+        pickUpdateData,
+        updateData
+    ],function () {
+        debug("Update completed.");
+    });
+&nbsp;
+    /**
+     * @name                - Pick update data
+     * @description         - Picks up valid update data.
+     * @param callback      - Callback function (error,validUpdateData)
+     */
+    function pickUpdateData (callback)                  {
+        debug("Pick update data init...");
+&nbsp;
+        controllerHelper.pickUpdateData(["name","age","gender","followers","superPower","costume","powerGrade","tournament","history","angerLevel","optimismLevel"],req,function (err,validUpdateData) { // Picking up valid update data.
+            if(Object.keys(validUpdateData).length === 0){ // No valid update data found.
+                let errMsg = errorCodes.SEC.IMPROPER_DATA;
+                errMsg.detail = "Valid update data not found in heroAcademia data update.";
+                res.status(400);
+                res.json(errMsg);
+            }else <span class="missing-if-branch" title="else path not taken" >E</span>if(Object.keys(validUpdateData).length &gt; 0){callback(null,validUpdateData);} // Valid update data found.
+&nbsp;
+        });
+    }
+&nbsp;
+    /**
+     * @name                        - Update service
+     * @description                 - Updates service data.
+     * @param validUpdateData       - Valid update data.
+     * @param callback              - Callback function (error)
+     */
+    function updateData (validUpdateData,callback)  {
+        debug("Update service init...");
+&nbsp;
+        if(Object.keys(query).length === 0){
+                let errMsg = errorCodes.SEC.NO_DATA_FOUND;
+                errMsg.detail = "No query data found.";
+                res.status(400);
+                res.json(errMsg)
+        }else{
+             teacherDAL.updateMany(query,validUpdateData,function (err,data) {   // handling update.
+                 queryResponseHandler(err,data,res,function (err, data) {    // Possible errors are handled.
+                     res.status(200);
+                     res.send(data);
+                     callback(null);
+                 });
+             });
+        }
+    }
+};
+&nbsp;
+/**
+ * @name                - Remove Many
+ * @description         - Removes all teacher data that matches query
+ * @param req           - Request object
+ * @param res           - Response object
+ * @param next          - Next
+ */
+exports.remove          = function (req, res, next) {
+    debug('Remove many init.');
+&nbsp;
+    let query = controllerHelper.queryFilter(req,["name","age","gender","followers","superPower","costume","powerGrade","tournament","history","angerLevel","optimismLevel", "_id", "__v"]);
+&nbsp;
+    if(Object.keys(query).length === 0){
+            let errMsg = errorCodes.SEC.NO_DATA_FOUND;
+            errMsg.detail = "No query data found.";
+            res.status(400);
+            res.json(errMsg)
+    }else{
+           teacherDAL.removeMany(query,function (err,data) {   // handling update.
+               queryResponseHandler(err,data,res,function (err, data) {   // Possible errors are handled.
+                   res.status(200);
+                   res.send(data);
+               });
+           });
+    }
+};
+&nbsp;
+&nbsp;
+/**
+ *
+ * @name                - Find public
+ * @description         - Find teacher data by id visible only fields that are public.
+ * @param req           - Request object
+ * @param res           - Response object
+ * @param next          - Next
+ */
+function getPublic  (req, res, next) {
+    debug('Find public init...');
+&nbsp;
+    let
+        teacherId   = req.query._id,
+        query       = {_id: teacherId}; // query construction.
+&nbsp;
+    teacherDAL.getPublic(query,function (err,data) { // retrieve teacher public data (with out the value)
+        queryResponseHandler(err,data,res,function (err, data) { // Error handled.
+            <span class="missing-if-branch" title="if path not taken" >I</span>if(!data){ // No teacher value could be found
+<span class="cstat-no" title="statement not covered" >                res.status(404);</span>
+<span class="cstat-no" title="statement not covered" >                res.json(errorCodes.SEC.NO_DATA_FOUND);</span>
+            }else <span class="missing-if-branch" title="else path not taken" >E</span>if(data){ // Found teacher data
+                res.status(200);
+                res.send(data);
+            }
+        });
+    });
+}
+&nbsp;
+/**
+ * @name                - Find private
+ * @description         - Find teacher data by id visible only fields that are private.
+ * @param req           - Request object
+ * @param res           - Response object
+ * @param next          - Next
+ */
+<span class="fstat-no" title="function not covered" >function getPrivate (req, res, next) {</span>
+<span class="cstat-no" title="statement not covered" >    debug('Find private init...');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    let</span>
+        teacherId = req.query._id,
+        query = {_id: teacherId}; // query construction.
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    teacherDAL.getPrivate(query,<span class="fstat-no" title="function not covered" >function (err,data) {</span> // retrieve teacher public data (with out the value)</span>
+<span class="cstat-no" title="statement not covered" >        queryResponseHandler(err,data,res,<span class="fstat-no" title="function not covered" >function (err, data) {</span> // Error handled.</span>
+<span class="cstat-no" title="statement not covered" >            if(!data){ // No teacher value could be found</span>
+<span class="cstat-no" title="statement not covered" >                res.status(404);</span>
+<span class="cstat-no" title="statement not covered" >                res.json(errorCodes.SEC.NO_DATA_FOUND);</span>
+            }else <span class="cstat-no" title="statement not covered" >if(data){ // Found teacher data</span>
+<span class="cstat-no" title="statement not covered" >                res.status(200);</span>
+<span class="cstat-no" title="statement not covered" >                res.send(data);</span>
+            }
+        });
+    });
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jun 05 2019 17:42:57 GMT+0300 (EAT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

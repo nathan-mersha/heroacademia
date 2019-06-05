@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for Hero Academia/model/teacher.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">Hero Academia/model/</a> teacher.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80.95% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>17/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>2/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80.95% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>17/21</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author             Young Midoria
+ * @name               heroAcademia
+ * @description        Manages teacher for heroAcademia
+ * @kind               Model
+ * @module             Defines teacher model
+ * @copyright          Copyright : 2018
+ */
+&nbsp;
+let
+    mongoose            = require('mongoose'),
+    Schema              = mongoose.Schema,
+    config              = require('../config'),
+    mongoosastic        = require('mongoosastic'),
+    debug               = require('debug')('heroAcademia/model/teacher'),
+    mongoosePaginate    = require('mongoose-paginate');
+&nbsp;
+let teacher = new Schema({
+    // Schema definition begins here
+    name : {type:String,es_indexed:true},
+    age : {type:Number,es_indexed:true},
+    gender : {type:String,es_indexed:true},
+    followers : {type:Array,es_indexed:true},
+    superPower : {type:String,es_indexed:false},
+    costume : {type:String,es_indexed:true},
+    powerGrade : {type:String,es_indexed:true},
+    tournament : {type:Schema.Types.ObjectId,es_indexed:true,ref:"Tournament"},
+    history : {type:Schema.Types.ObjectId,es_indexed:true,ref:"History"},
+    angerLevel : {type:Number,es_indexed:true},
+    optimismLevel : {type:Number,es_indexed:true},
+     firstModified : {type : Date, es_indexed : true},
+     lastModified : {type : Date, es_indexed : true}
+    // Schema definition ends here
+});
+&nbsp;
+&nbsp;
+/*
+ Adding plugins
+ */
+teacher.plugin(mongoosePaginate);
+&nbsp;
+/*
+ Adding plugin
+ */
+teacher.plugin(mongoosastic,{
+    hosts : [
+        String(config.ELASTIC_SEARCH_URL), // Adding elastic search url for latter search indexing...
+    ]
+});
+&nbsp;
+&nbsp;
+// Updating time Stamp of first and last modified before initial save
+teacher.pre('save',function preSave(next) {
+    let teacherSchema  = this;
+    let now = new Date();
+&nbsp;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if(!teacherSchema.firstModified ){  // Saving for the first time
+        teacherSchema.firstModified  = now.toISOString();
+        teacherSchema.lastModified   = now.toISOString();
+        next();
+    }else{ // Saving Modified data
+<span class="cstat-no" title="statement not covered" >        teacherSchema.lastModified   = now.toISOString();</span>
+<span class="cstat-no" title="statement not covered" >        next();</span>
+    }
+});
+&nbsp;
+let teacherSchema = mongoose.model('teacher', teacher);
+&nbsp;
+/**
+ * @description     - Creating mapping with elastic search
+ */
+teacherSchema.createMapping(function (err,mapping) {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if(err){
+        debug(`Error while mapping`);
+        debug(`Error is : ${err}`);
+    }else{
+<span class="cstat-no" title="statement not covered" >        debug(`Successful Mapping`);</span>
+<span class="cstat-no" title="statement not covered" >        debug(`${mapping}`);</span>
+    }
+});
+&nbsp;
+module.exports = teacherSchema;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jun 05 2019 17:42:57 GMT+0300 (EAT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

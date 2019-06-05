@@ -1,0 +1,11 @@
+pipeline {
+  agent any
+
+  stages {
+    stage(‘Deploy heroAcademia proxy’) {
+      steps {
+        sh ‘docker-compose up --build -d’
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+version: '2'
+services:
+
+  #################################################################################################################################
+  ########################                      hero_academia              #####################################################
+  #################################################################################################################################
+
+    hero_academia:
+      build: ./.
+      ports:
+        - "3300:3300"
+      restart: always
+      environment:
+        - DEBUG=*
+        - HTTP_PORT=3300
+        - MODE=test_mode
+        - MONGODB_URL=mongodb://hero_academia_db:27017/hero_academia
+        - REVERSE_PROXY=http://localhost
+        - COLLECTION_RETURN_SIZE=24
+        - ELASTIC_SEARCH_URL=http://localhost:9200
+        - LOG_STASH_PORT=5000
+      depends_on:
+        - hero_academia_db
+    # Defining hero_academia DB
+    hero_academia_db:
+       image: mongo:latest
+       restart: always
+       volumes:
+         - .:/data/db
+
+  #################################################################################################################################
+  #################################################################################################################################

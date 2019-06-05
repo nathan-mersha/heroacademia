@@ -1,0 +1,55 @@
+{
+  "name": "hero_academia",
+  "version": "0.0.1",
+  "description": "hero_academia",
+  "main": "app",
+  "scripts": {
+    "run": "node app",
+    "test": "istanbul cover _mocha -- --reporter mochawesome --reporter-options reportDir=report,reportFilename=index --exit || istanbul cover _mocha -- --reporter mochawesome --reporter-options reportDir=report,reportFilename=index",
+    "start": "pm2-docker app.js --name hero_academia -i 1 || pm2 restart hero_academia ",
+    "apidoc": "apidoc -i ./routes -o ./apidocs"
+  },
+  "dependencies": {
+    "apidoc": "^0.17.5",
+    "async": "2.6.1",
+    "body-parser": "~1.15.2",
+    "bunyan": "^1.8.12",
+    "bunyan-logstash-tcp": "^1.0.0",
+    "cors": "^2.8.3",
+    "debug": "~2.2.0",
+    "dotenv": "6.0.0",
+    "dummy-json": "^2.0.0",
+    "elasticsearch": "^13.0.1",
+    "express": "4.16.3",
+    "express-messages": "1.0.1",
+    "express-session": "1.15.6",
+    "express-unless": "0.5.0",
+    "express-validator": "5.3.0",
+    "helmet": "^3.6.1",
+    "mocker-data-generator": "^2.6.6",
+    "mongodb": "3.1.6",
+    "mongoosastic": "^4.3.0",
+    "mongoose": "5.3.1",
+    "mongoose-paginate": "^5.0.3",
+    "request": "2.88.0",
+    "xtend": "^4.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "cheerio": "^0.22.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "mochawesome": "^3.0.0",
+    "supertest": "^3.0.0",
+    "mocha-simple-html-reporter": "^1.1.0"
+  },
+  "keywords": [
+    "hero_academia"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com"
+  },
+  "author": "Young Midoria",
+  "license": "MIT"
+}

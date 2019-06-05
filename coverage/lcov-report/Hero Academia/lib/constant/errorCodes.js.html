@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for Hero Academia/lib/constant/errorCodes.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">Hero Academia/lib/constant/</a> errorCodes.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>1/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/1</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author              Young Midoria
+ * @name                heroAcademia
+ * @module              errorCodes.js
+ * @description         Error code constants.
+ * @kind                Constants
+ * @copyright           Copyright : 2018
+ */
+&nbsp;
+/**
+ * @description     - Defines error codes.
+ */
+module.exports = {
+&nbsp;
+    /**
+     * @name            - SEC (Shared error Codes)
+     * @description     - Defines a list of error codes that could be generated by all services. (Shared Error Codes)
+     */
+    SEC                 : {
+&nbsp;
+        CREATOR_SERVICE_UNKNOWN             : {
+            errorCode       : "SEC_000",
+            errorName       : "Service Unknown value",
+            errorMessage    : "Creator service is not known",
+            hint            : "Possible problem could arise in using old service id's.View documentation for the latest values."
+        },
+&nbsp;
+        CAST_ERROR                          : {
+            errorCode       : "SEC_001",
+            errorName       : "Cast error",
+            errorMessage    : "Possible casting error.",
+            hint            : "View documentation for proper value types.This error usually arises when using objectId values."
+        },
+&nbsp;
+        SERVER_SIDE_ERROR                   : {
+            errorCode       : "SEC_002",
+            errorName       : "Server side error",
+            errorMessage    : "Server side error.",
+            hint            : "This is error code will be sent when all server side error codes are exhausted. Try again latter or contact service provider."
+        },
+&nbsp;
+        NO_DATA_FOUND                       : {
+            errorCode       : "SEC_003",
+            errorName       : "No data found",
+            errorMessage    : "No data found in query.",
+            hint            : "The query data you provided may have been removed, or do not exist in the first place."
+        },
+&nbsp;
+        IMPROPER_DATA                       : {
+            errorCode       : "SEC_004",
+            errorName       : "Improper data",
+            errorMessage    : "Proper data was not provided.",
+            hint            : `Cross check proper data against values in documentation`
+        },
+&nbsp;
+        SERVICES_DOWN                       : {
+            errorCode       : "SEC_005",
+            errorName       : "Service down",
+            errorMessage    : "Some dependent services may be down.",
+            hint            : "Contact service provider."
+        },
+&nbsp;
+        QUERY_ERROR                         : {
+            errorCode       : "SEC_006",
+            errorName       : "Query error",
+            errorMessage    : "Error while querying",
+            hint            : "Nothing you can do, try again latter or contact service provider."
+        },
+&nbsp;
+        VALIDATION_ERROR                    : {
+            errorCode       : "SEC_007",
+            errorName       : "Validation error",
+            errorMessage    : "You have not provided complete data.",
+            hint            : "View documentation for necessary fields."
+        },
+&nbsp;
+        NO_QUERY_DATA                       : {
+            errorCode       : "SEC_008",
+            errorName       : "No query data provided",
+            errorMessage    : "No proper or no query data has been provided.Mainly could be caused by using wrong key in url.",
+            hint            : "View documentation for proper key to use in query and proper query value."
+        },
+&nbsp;
+        OPERATION_METHOD_INVALID            : {
+            errorCode       : "SEC_009",
+            errorName       : "Invalid collection operation method.",
+            errorMessage    : "Proper collection operation method have not been provided.",
+            hint            : "View documentation for valid operation methods."
+        },
+&nbsp;
+        CONNECTION_REFUSED                  : {
+            errorCode       : "SEC_010",
+            errorName       : "Connection refused",
+            errorMessage    : "Internal service connection refused.",
+            hint            : "Observe ping results at app init. and check if you have allowed the service to start if the dependant services are down."
+        },
+&nbsp;
+        CONNECTION_ABORTED                  : {
+            errorCode       : "SEC_011",
+            errorName       : "Connection aborted",
+            errorMessage    : "Internal service connection aborted.",
+            hint            : "Ping dependent services, dependent services may be down."
+        },
+&nbsp;
+        CONNECTION_CANCELED                 : {
+            errorCode       : "SEC_012",
+            errorName       : "Connection canceled",
+            errorMessage    : "Internal service connection canceled.",
+            hint            : "Could be caused due probable timeout. View documentation for timeout setting."
+        },
+&nbsp;
+        NOT_PROPER_OBJECT_ID                : {
+            errorCode       : "SEC_014",
+            errorName       : "Not proper objectId",
+            errorMessage    : "Provided value can not be casted to objectId.",
+            hint            : "View documentation for proper objectId formats."
+        },
+&nbsp;
+        UN_MATCHED_ENDPOINT                 : {
+            errorCode       : "SEC_015",
+            errorName       : "Un-matched endpoint",
+            errorMessage    : "You have requested for an unmatched endpoint.",
+            hint            : "View documentation for a list of endpoints."
+        },
+&nbsp;
+        PHONE_DOES_NOT_MATCH_EXPRESSION     : {
+            errorCode       : "SEC_016",
+            errorName       : "Phone does not match expression",
+            errorMessage    : "Input phone value does not match phone expression",
+            hint            : "View documentation for proper phone expressions."
+        },
+&nbsp;
+        DEPENDENT_SERVICES_DOWN             : {
+            errorCode       : "SEC_017",
+            errorName       : "Dependant services down",
+            errorMessage    : "Dependant services may be down.",
+            hint            : "Contact your service provider if there is any change in the access url."
+        }
+&nbsp;
+    },
+&nbsp;
+    /**
+     * @name            - Authentication error codes.
+     * @description     - Defines a list of error codes that could be generated when communicating with authentication service.
+     */
+    AUT                 : {
+&nbsp;
+        AUTHENTICATION_NOT_SET                  : {
+            errorCode       : "AUT_000",
+            errorName       : "Authentication is not set",
+            errorMessage    : "Authentication values are not set.",
+            hint            : "View documentation on how to set authentication values on the header."
+        },
+&nbsp;
+        AUTHENTICATION_DATA_NOT_PROPER_LENGTH   : {
+            errorCode       : "AUT_001",
+            errorName       : "Authentication data not proper length.",
+            errorMessage    : "Authentication data does not contain proper length.",
+            hint            : "View documentation on how to set authentication values on the header."
+        },
+&nbsp;
+        AUTHENTICATION_TYPE_NOT_ACCORD          : {
+            errorCode       : "AUT_002",
+            errorName       : "Authentication type is not correct.",
+            errorMessage    : "Authentication type is not according to constants.",
+            hint            : "Authentication type should be 'Bearer', view documentation for more."
+        },
+&nbsp;
+        AUTHENTICATION_VALUE_NOT_SET            : {
+            errorCode       : "AUT_003",
+            errorName       : "Authentication value is not set",
+            errorMessage    : "Authentication values are not set.",
+            hint            : "Authentication key exists, but value may not."
+        },
+&nbsp;
+        AUTHENTICATION_SERVICE_ACCESS_FAIL      : {
+            errorCode       : "AUT_004",
+            errorName       : "Authentication access fail",
+            errorMessage    : "Failed to access authentication service.",
+            hint            : "Ping authentication service, or contact service provider."
+        },
+&nbsp;
+        TOKEN_REVOKED                           : {
+            errorCode       : "AUT_005",
+            errorName       : "Token revoked",
+            errorMessage    : "Token is revoked.",
+            hint            : "Consider logging in again."
+        },
+&nbsp;
+        TOKEN_EXPIRED                           : {
+            errorCode       : "AUT_006",
+            errorName       : "Token expired",
+            errorMessage    : "Token has expired.",
+            hint            : "Consider logging in again."
+        },
+&nbsp;
+        AUTHORIZED_SERVICE_ACCESS_DENIED        : {
+            errorCode       : "AUT_007",
+            errorName       : "Authorized service_access denied",
+            errorMessage    : "Service has no been granted access",
+            hint            : "View documentation which services are allowed to access which services.Contact service provider for more."
+        },
+&nbsp;
+        SERVICE_ACCESS_DENIED                   : {
+            errorCode       : "AUT_008",
+            errorName       : "Service access denied",
+            errorMessage    : "Service has no been granted access",
+            hint            : "View documentation which services are allowed to access which services.Contact service provider for more."
+        },
+&nbsp;
+        UNAUTHORIZED_ACCESS                     : {
+            errorCode       : "AUT_009",
+            errorName       : "Unauthorized token",
+            errorMessage    : "Token is not authorized to access this route.",
+            hint            : "View documentation for access level"
+        }
+&nbsp;
+    }
+&nbsp;
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jun 05 2019 17:42:57 GMT+0300 (EAT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

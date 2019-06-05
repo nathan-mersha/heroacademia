@@ -1,0 +1,538 @@
+{
+  "info": {
+    "name": "heroAcademia",
+    "description": "Teacher and student hero registry for Hero Academia",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    
+        {
+			"name": "teacher",
+			"description": "teacher CRUD collection",
+			"item": [
+				{
+      "name": "Create teacher",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Erik\",\n    \"age\": \"81\",\n    \"gender\": \"Elementum sed eu in rhoncus.\",\n    \"followers\": [\n        \"Et.\",\n        \"Sollicitudin.\",\n        \"Purus.\",\n        \"Pharetra.\"\n    ],\n    \"superPower\": \"Cras ut imperdiet elit neque.\",\n    \"costume\": \"Adipiscing eti lectus arcu mattis.\",\n    \"powerGrade\": \"A ornare nisi lacus sapien.\",\n    \"tournament\": \"5cf7d4e4e619986d4a267ab8\",\n    \"history\": \"5cf7d4e4e619986d4a267ab8\",\n    \"angerLevel\": \"66199\",\n    \"optimismLevel\": \"42300\"\n}"
+        },
+        "url": {
+          "raw": "http://http://localhost:3300/heroAcademia/teacher",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "heroAcademia",
+            "teacher"
+          ]
+        },
+        "description": "Create teacher"
+      },
+      "response": []
+    },
+    {
+      "name": "Get teacher",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://http://localhost:3300/heroAcademia/teacher",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "heroAcademia",
+            "teacher"
+          ]
+        },
+        "description": "Get teacher"
+      },
+      "response": []
+    },
+    {
+      "name": "Delete teacher",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://http://localhost:3300/heroAcademia/teacher?_id=5bc206d3048c9e1527797073",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "heroAcademia",
+            "teacher"
+          ],
+          "query": [
+            {
+              "key": "_id",
+              "value": "5bc206d3048c9e1527797073"
+            }
+          ]
+        },
+        "description": "Delete teacher"
+      },
+      "response": []
+    },
+    {
+      "name": "Update teacher",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Erik\",\n    \"age\": \"47\",\n    \"gender\": \"Dolor neque ante metus au.\",\n    \"followers\": [\n        \"Placerat.\",\n        \"Hendrerit.\",\n        \"Accumsan.\",\n        \"Vitae.\"\n    ],\n    \"superPower\": \"Velit posuere rhoncus pulvinar sit.\",\n    \"costume\": \"Lobortis pellentesque sem vestibulum laoreet.\",\n    \"powerGrade\": \"Morbi maecenas est mollis massa.\",\n    \"tournament\": \"5cf7d4e4e619986d4a267ab8\",\n    \"history\": \"5cf7d4e4e619986d4a267ab8\",\n    \"angerLevel\": \"85391\",\n    \"optimismLevel\": \"97938\"\n}"
+        },
+        "url": {
+          "raw": "http://http://localhost:3300/heroAcademia/teacher?_id=5bc20776048c9e1527797077",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "heroAcademia",
+            "teacher"
+          ],
+          "query": [
+            {
+              "key": "_id",
+              "value": "5bc20776048c9e1527797077"
+            }
+          ]
+        },
+        "description": "Update teacher"
+      },
+      "response": []
+    }]
+},
+    
+        {
+			"name": "student",
+			"description": "student CRUD collection",
+			"item": [
+				{
+      "name": "Create student",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Haley\",\n    \"age\": \"89\",\n    \"gender\": \"Sapien mattis aliquam ante adipiscing.\",\n    \"powerClass\": \"Maecenas sodales sit lacinia nibh.\",\n    \"superPower\": \"Pulvinar sed porttitor sem bibendum.\",\n    \"costume\": \"Dictum euismod hendrerit dignissim aliquet.\",\n    \"powerGrade\": \"Proin etiam maecenas proin at.\",\n    \"tournament\": \"5cf7d4e4e619986d4a267ab8\",\n    \"history\": \"5cf7d4e4e619986d4a267ab8\",\n    \"wins\": \"41877\",\n    \"loss\": \"77175\",\n    \"draw\": \"25660\"\n}"
+        },
+        "url": {
+          "raw": "http://http://localhost:3300/heroAcademia/student",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "heroAcademia",
+            "student"
+          ]
+        },
+        "description": "Create student"
+      },
+      "response": []
+    },
+    {
+      "name": "Get student",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://http://localhost:3300/heroAcademia/student",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "heroAcademia",
+            "student"
+          ]
+        },
+        "description": "Get student"
+      },
+      "response": []
+    },
+    {
+      "name": "Delete student",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://http://localhost:3300/heroAcademia/student?_id=5bc206d3048c9e1527797073",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "heroAcademia",
+            "student"
+          ],
+          "query": [
+            {
+              "key": "_id",
+              "value": "5bc206d3048c9e1527797073"
+            }
+          ]
+        },
+        "description": "Delete student"
+      },
+      "response": []
+    },
+    {
+      "name": "Update student",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Eleanore\",\n    \"age\": \"99\",\n    \"gender\": \"Commodo erat nisl sagittis cursus.\",\n    \"powerClass\": \"Vehicula etiam cras morbi mattis.\",\n    \"superPower\": \"Ac sit et id posuere.\",\n    \"costume\": \"Felis enim ac massa neque.\",\n    \"powerGrade\": \"Curabitur fringilla pulvinar felis ut.\",\n    \"tournament\": \"5cf7d4e4e619986d4a267ab8\",\n    \"history\": \"5cf7d4e4e619986d4a267ab8\",\n    \"wins\": \"53403\",\n    \"loss\": \"39182\",\n    \"draw\": \"58329\"\n}"
+        },
+        "url": {
+          "raw": "http://http://localhost:3300/heroAcademia/student?_id=5bc20776048c9e1527797077",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "heroAcademia",
+            "student"
+          ],
+          "query": [
+            {
+              "key": "_id",
+              "value": "5bc20776048c9e1527797077"
+            }
+          ]
+        },
+        "description": "Update student"
+      },
+      "response": []
+    }]
+},
+    
+        {
+			"name": "tournament",
+			"description": "tournament CRUD collection",
+			"item": [
+				{
+      "name": "Create tournament",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Rolf\",\n    \"wins\": \"30888\",\n    \"loss\": \"57377\",\n    \"draw\": \"70981\"\n}"
+        },
+        "url": {
+          "raw": "http://http://localhost:3300/heroAcademia/tournament",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "heroAcademia",
+            "tournament"
+          ]
+        },
+        "description": "Create tournament"
+      },
+      "response": []
+    },
+    {
+      "name": "Get tournament",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://http://localhost:3300/heroAcademia/tournament",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "heroAcademia",
+            "tournament"
+          ]
+        },
+        "description": "Get tournament"
+      },
+      "response": []
+    },
+    {
+      "name": "Delete tournament",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://http://localhost:3300/heroAcademia/tournament?_id=5bc206d3048c9e1527797073",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "heroAcademia",
+            "tournament"
+          ],
+          "query": [
+            {
+              "key": "_id",
+              "value": "5bc206d3048c9e1527797073"
+            }
+          ]
+        },
+        "description": "Delete tournament"
+      },
+      "response": []
+    },
+    {
+      "name": "Update tournament",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Drew\",\n    \"wins\": \"73722\",\n    \"loss\": \"5596\",\n    \"draw\": \"5431\"\n}"
+        },
+        "url": {
+          "raw": "http://http://localhost:3300/heroAcademia/tournament?_id=5bc20776048c9e1527797077",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "heroAcademia",
+            "tournament"
+          ],
+          "query": [
+            {
+              "key": "_id",
+              "value": "5bc20776048c9e1527797077"
+            }
+          ]
+        },
+        "description": "Update tournament"
+      },
+      "response": []
+    }]
+},
+    
+        {
+			"name": "history",
+			"description": "history CRUD collection",
+			"item": [
+				{
+      "name": "Create history",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"angerLevel\": \"74784\",\n    \"optimismLevel\": \"45101\",\n    \"enemyDefeat\": \"94029\",\n    \"archNemesis\": \"Sed lobortis pretium ultricies mi.\",\n    \"battleGroundDefeat\": \"96096\",\n    \"enemyCapture\": \"6295\",\n    \"alive\": false\n}"
+        },
+        "url": {
+          "raw": "http://http://localhost:3300/heroAcademia/history",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "heroAcademia",
+            "history"
+          ]
+        },
+        "description": "Create history"
+      },
+      "response": []
+    },
+    {
+      "name": "Get history",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://http://localhost:3300/heroAcademia/history",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "heroAcademia",
+            "history"
+          ]
+        },
+        "description": "Get history"
+      },
+      "response": []
+    },
+    {
+      "name": "Delete history",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://http://localhost:3300/heroAcademia/history?_id=5bc206d3048c9e1527797073",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "heroAcademia",
+            "history"
+          ],
+          "query": [
+            {
+              "key": "_id",
+              "value": "5bc206d3048c9e1527797073"
+            }
+          ]
+        },
+        "description": "Delete history"
+      },
+      "response": []
+    },
+    {
+      "name": "Update history",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"angerLevel\": \"30746\",\n    \"optimismLevel\": \"12193\",\n    \"enemyDefeat\": \"56294\",\n    \"archNemesis\": \"Tincidunt a facilisis ultrices tincidunt.\",\n    \"battleGroundDefeat\": \"83472\",\n    \"enemyCapture\": \"44368\",\n    \"alive\": true\n}"
+        },
+        "url": {
+          "raw": "http://http://localhost:3300/heroAcademia/history?_id=5bc20776048c9e1527797077",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "heroAcademia",
+            "history"
+          ],
+          "query": [
+            {
+              "key": "_id",
+              "value": "5bc20776048c9e1527797077"
+            }
+          ]
+        },
+        "description": "Update history"
+      },
+      "response": []
+    }]
+}
+
+  ]
+}

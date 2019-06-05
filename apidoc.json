@@ -1,0 +1,7 @@
+{
+  "name"        : "heroAcademia",
+  "version"     : "0.0.1",
+  "description" : "Teacher and student hero registry for Hero Academia",
+  "title"       : "heroAcademia documentation.",
+  "url"         : "http://localhost:3300"
+}

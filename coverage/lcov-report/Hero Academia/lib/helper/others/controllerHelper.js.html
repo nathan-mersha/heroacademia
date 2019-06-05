@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for Hero Academia/lib/helper/others/controllerHelper.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">Hero Academia/lib/helper/others/</a> controllerHelper.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">83.78% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>31/37</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">90% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>9/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">85.71% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">83.78% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>31/37</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">28×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">28×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">102×</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">102×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">252×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author              Young Midoria
+ * @name                heroAcademia
+ * @module              controllerHelper.js
+ * @description         Controller helpers.
+ * @kind                Lib
+ * @copyright           Copyright : 2018
+ */
+&nbsp;
+let
+    debug       = require('debug')('heroAcademia/lib/helper/others/controllerHelper'),
+    util        = require('util'),
+    constant    = require('../../constant'),
+    errorCodes  = constant.errorCodes;
+&nbsp;
+/**
+ * @name                    - Query response handler
+ * @description             - Handles possible error and empty data return upon query, create, remove or update.
+ * @param err               - Error (Possible)
+ * @param data              - Data  (Possible)
+ * @param res               - Response object
+ * @param callback          - Callback function (error,data)
+ */
+exports.queryResponseHandler    = function queryResponseHandler(err,data,res,callback)      {
+    debug("Query response handler init...");
+&nbsp;
+    if(err){ // Possible error while querying.
+        // todo Handle errors by type and assign 4** or 5**
+         debug(`Error : ${err.toString()}`);
+         let errMsg = errorCodes.SEC.QUERY_ERROR;
+         errMsg.hint = err;
+         res.status(400);
+         res.json(errMsg);
+    }else { // No Error.
+        callback(err,data);
+    }
+};
+&nbsp;
+/**
+ * @name                    - Data validator
+ * @description             - Checks if the provided data attributes is present in the request body
+ * @param paramVariables    - The param variables to check
+ * @param req               - The request object to check from
+ * @param res               - The response body to respond with any error messages if the provided request object fails to fulfill the param values.
+ * @param callback          - Passes on with null as an error if every thing is up to order.
+ */
+exports.dataValidator           = function dataValidator(paramVariables,req,res,callback)   {
+    debug(`Data validator init...`);
+&nbsp;
+    paramVariables.forEach(<span class="fstat-no" title="function not covered" >function (variable) {</span>
+<span class="cstat-no" title="statement not covered" >        req.checkBody(variable)</span>
+            .notEmpty().withMessage(`${variable} must not be empty`);
+    });
+&nbsp;
+    let validationError = req.validationErrors();
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if(validationError){ // caught validation error.
+<span class="cstat-no" title="statement not covered" >        debug(`Validation Error`);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        let errCode = errorCodes.SEC.VALIDATION_ERROR;</span>
+<span class="cstat-no" title="statement not covered" >        errCode.detail = validationError;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        res.status(400);</span>
+<span class="cstat-no" title="statement not covered" >        res.json(errCode);</span>
+    }else{ // validation has passed
+        debug(`Validation Passed`);
+        callback(null);
+    }
+};
+&nbsp;
+/**
+ * @name                    - Pick update data
+ * @description             - Picks valid update data from the request body
+ * @param pickFields        - List of fields that are valid to update.
+ * @param req               - Request object
+ * @param callback          - Callback function (error,validUpdateData)
+ */
+exports.pickUpdateData          = function pickUpdateData(pickFields,req,callback)          {
+    debug("Pick update data init...");
+&nbsp;
+    let updateData = {};
+    pickFields.forEach(function (field,index) { // Looping through the valid update data fields
+        if(! util.isNullOrUndefined(req.body[field])) { // check if the field exists on the query
+            updateData[field] = req.body[field];
+        }
+        if(index+1 === pickFields.length) { // Looped through the final element.
+            callback(null,updateData);
+        }
+    });
+};
+&nbsp;
+/**
+ * @name                    - Query filter
+ * @description             - Filters valid query from request
+ * @param req               - Request object
+ * @param lookingFor        - Query looking for
+ * @return {{}}             - Valid queries.
+ */
+exports.queryFilter             = function queryFilter(req, lookingFor)                     {
+    let query = {};
+    lookingFor.forEach(function (element) {
+        if(! util.isNullOrUndefined(req.query[element])){
+            query[element] = req.query[element]
+        }
+    });
+    return query;
+};</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jun 05 2019 17:42:57 GMT+0300 (EAT)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>
