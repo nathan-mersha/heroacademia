@@ -29,7 +29,7 @@
     "mocker-data-generator": "^2.6.6",
     "mongodb": "3.1.6",
     "mongoosastic": "^4.3.0",
-    "mongoose": "5.3.1",
+    "mongoose": "5.7.5",
     "mongoose-paginate": "^5.0.3",
     "request": "2.88.0",
     "xtend": "^4.0.1"
