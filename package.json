@@ -16,7 +16,7 @@
     "bunyan": "^1.8.12",
     "bunyan-logstash-tcp": "^1.0.0",
     "cors": "^2.8.3",
-    "debug": "~2.2.0",
+    "debug": "~2.6.9",
     "dotenv": "6.0.0",
     "dummy-json": "^2.0.0",
     "elasticsearch": "^13.0.1",
